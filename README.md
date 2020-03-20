@@ -7,10 +7,6 @@
 Live demo is available at:
 https://gatsby-contentful-portfolio.netlify.com/
 
-## Screenshot
-
-![The home page](screenshot.png?raw=true)
-
 ## Who is this for?
 
 - Graphic designers
