@@ -1,4 +1,5 @@
 import React from "react"
+import { FaIceCream } from "react-icons/fa"
 
 const Hero = () => (
   <div className="container py-12 lg:pb-16">
@@ -8,7 +9,9 @@ const Hero = () => (
         👋
       </span>
       <br />
-      <span className="text-blue-600">Welcome to my portfolio website.</span>
+      <span className="text-blue-600">
+        Welcome to my New portfolio website.
+      </span>
     </h2>
   </div>
 )
