@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "author": "Wojciech Kocjan <wojciech@kocjan.net>",
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
+    "@contentful/rich-text-types": "^14.1.0",
     "autoprefixer": "^9.7.4",
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",

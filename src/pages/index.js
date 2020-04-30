@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
 
       <Hero />
 
-      <div className="bg-gray-100 py-12 lg:py-16">
+      <div className="bg-gray-200 py-12 lg:py-16">
         <Cards items={data.portfolio.nodes} />
       </div>
       <Newsletter />
