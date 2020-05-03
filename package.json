@@ -1,8 +1,8 @@
 {
   "name": "gatsby-contentful-portfolio",
-  "description": "Portfolio theme for GatsbyJS",
+  "description": "Noman Ahmed Khan Website",
   "version": "1.0.0",
-  "author": "Wojciech Kocjan <wojciech@kocjan.net>",
+  "author": "Noman Ahmed Khan <TheNomanAhmed@gmail.com>",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@contentful/rich-text-types": "^14.1.0",
@@ -20,6 +20,7 @@
     "gatsby-plugin-sharp": "^2.4.12",
     "gatsby-source-contentful": "^2.1.96",
     "gatsby-source-filesystem": "^2.1.54",
+    "gatsby-transformer-remark": "^2.8.4",
     "gatsby-transformer-sharp": "^2.3.16",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
@@ -28,7 +29,7 @@
     "react-icons": "^3.9.0",
     "react-id-swiper": "^3.0.0",
     "swiper": "^5.3.6",
-    "tailwindcss": "^1.2.0",
+    "tailwindcss": "^1.4.1",
     "typeface-inter": "^3.12.0"
   },
   "devDependencies": {

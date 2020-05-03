@@ -73,5 +73,6 @@ module.exports = {
         ignore: ["Carousel.css", "swiper.css"],
       },
     },
+    `gatsby-transformer-remark`,
   ],
 }

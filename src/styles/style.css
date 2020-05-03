@@ -23,3 +23,7 @@ body {
     @apply .px-8;
   }
 }
+
+.test {
+  background-color: #000443;
+}

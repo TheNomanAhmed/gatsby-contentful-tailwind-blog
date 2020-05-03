@@ -4,7 +4,7 @@ import React from "react"
 import SiteMetadata from "../components/SiteMetadata"
 import Button from "../components/Button"
 import Cards from "../components/Cards"
-import Carousel from "../components/Carousel"
+//import Carousel from "../components/Carousel"
 import Newsletter from "../components/Newsletter"
 import Layout from "../layouts/Layout"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
@@ -35,6 +35,13 @@ export default props => {
       [BLOCKS.HEADING_4]: (node, children) => (
         <h4 className="text-blue-600">{children}</h4>
       ),
+
+      [BLOCKS.QUOTE]: (node, children) => (
+        console.log(node),
+        console.log(children),
+        (<blockquote className="bg-indigo-200">{children}</blockquote>)
+      ),
+
       [BLOCKS.EMBEDDED_ASSET]: (node, children) => (
         <img
           className="w-full"
@@ -42,19 +49,40 @@ export default props => {
         />
       ),
       [BLOCKS.EMBEDDED_ENTRY]: (node, children) => (
-        <a
-          className="w-full"
-          href={`https:${node.data.target.fields.slug["en-US"]}`}
-        ></a>
+        console.log(node),
+        (
+          <Link
+            className="link-1 font-bold text-2xl"
+            to={`./${node.data.target.fields.slug["en-US"]}`}
+          >
+            {node.data.target.fields.slug["en-US"]}
+          </Link>
+        )
       ),
       [INLINES.EMBEDDED_ENTRY]: (node, children) => (
-        <a className="w-full" href={`https:${node.data.target}`}>
-          Embed
-        </a>
+        <Link
+          className="text-xl link-1"
+          to={`./${node.data.target.fields.slug["en-US"]}`}
+        >
+          {node.data.target.fields.slug["en-US"]}
+        </Link>
       ),
       [BLOCKS.PARAGRAPH]: (node, children) => (
-        <p className="copy">{children}</p>
+        <p className="text-md leading-normal text-orange-800">{children}</p>
       ),
+      [INLINES.HYPERLINK]: node => {
+        const value = node.content.map(item => item.value)
+        return (
+          <a
+            className="link-1"
+            href={node.data.uri}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {value}
+          </a>
+        )
+      },
     },
     renderMark: {},
   }
